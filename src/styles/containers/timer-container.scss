@@ -1,0 +1,11 @@
+.countdown-timer_container {
+  height: 100vh;
+  background: url("./../../assets/images/bg-stars.svg");
+  background-color: $Very-dark-blue;
+  display: flex;
+  align-items: flex-end;
+
+  .hills {
+    width: 100%;
+  }
+}

@@ -1,10 +1,9 @@
-//@ts-ignore
-import hillsSource from "./assets/images/pattern-hills.svg";
+import { Footer } from "./containers/Footer";
 
 const App = () => {
   return (
     <div className="countdown-timer_container">
-      <img className="hills" src={hillsSource} />
+      <Footer />
     </div>
   );
 };

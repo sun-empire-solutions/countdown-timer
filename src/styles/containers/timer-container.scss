@@ -3,7 +3,9 @@
   background: url("./../../assets/images/bg-stars.svg");
   background-color: $Very-dark-blue;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 
   .hills {
     width: 100%;

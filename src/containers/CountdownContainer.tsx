@@ -1,29 +1,11 @@
-import { TimerItem } from "./../components/TimerItem";
+import { Footer } from "../components/Footer";
+import { CountdownTimer } from "../components/CountdownTimer";
 
 const CountdownContainer = () => {
   return (
     <div className="container-countdown">
-      <div className="tittle">
-        <h5>WE'RE LAUNCHING SOON</h5>
-      </div>
-      <div className="timer-items-container">
-        <div className="timer-container">
-          <TimerItem />
-          <p>DAYS</p>
-        </div>
-        <div className="timer-container">
-          <TimerItem />
-          <p>HOURS</p>
-        </div>
-        <div className="timer-container">
-          <TimerItem />
-          <p>MINUTES</p>
-        </div>
-        <div className="timer-container">
-          <TimerItem />
-          <p>SECONDS</p>
-        </div>
-      </div>
+      <CountdownTimer />
+      <Footer />
     </div>
   );
 };

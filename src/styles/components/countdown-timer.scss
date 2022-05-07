@@ -1,0 +1,21 @@
+.countdown-timer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .countdown-timer_title {
+    color: $White;
+    letter-spacing: 7px;
+    margin-bottom: 4rem;
+    font-weight: 700;
+  }
+
+  .countdown-timer_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 2rem;
+  }
+}

@@ -1,10 +1,6 @@
-import { Footer } from "./containers/Footer";
+import { CountdownContainer } from "./containers/CountdownContainer";
 
 const App = () => {
-  return (
-    <div className="countdown-timer_container">
-      <Footer />
-    </div>
-  );
+  return <CountdownContainer />;
 };
 export { App };

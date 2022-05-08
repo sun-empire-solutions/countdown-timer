@@ -1,17 +1,24 @@
 import { CountdownTimerItem } from "./CountdownTimerItem";
 
-const CountdownTimer = () => (
+const CountdownTimer = ({ days, hours, minutes, seconds }: IProps) => (
   <div className="countdown-timer">
     <div className="countdown-timer_title">
-      <h5>WE'RE LAUNCHING SOON</h5>
+      <h2>WE'RE LAUNCHING SOON</h2>
     </div>
     <div className="countdown-timer_items">
-      <CountdownTimerItem counter={0} title="days" />
-      <CountdownTimerItem counter={0} title="hours" />
-      <CountdownTimerItem counter={0} title="minutes" />
-      <CountdownTimerItem counter={0} title="seconds" />
+      <CountdownTimerItem counter={days} title="days" />
+      <CountdownTimerItem counter={hours} title="hours" />
+      <CountdownTimerItem counter={minutes} title="minutes" />
+      <CountdownTimerItem counter={seconds} title="seconds" />
     </div>
   </div>
 );
+
+type IProps = {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+};
 
 export { CountdownTimer };

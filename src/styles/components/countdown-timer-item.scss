@@ -53,7 +53,7 @@ $borderRadius: 0.15em;
   background: #222;
   padding: 0.25em 0.25em;
   border-radius: $borderRadius $borderRadius 0 0;
-  backface-visiblity: hidden;
+  // backface-visiblity: hidden;
   transform-style: preserve-3d;
   width: 1.3em;
   transform: translateZ(0);
@@ -104,6 +104,8 @@ $borderRadius: 0.15em;
   animation: flipTop 0.3s cubic-bezier(0.37, 0.01, 0.94, 0.35);
   animation-fill-mode: both;
   transform-origin: center bottom;
+  border-radius: 5px 5px 0px 0px;
+  color: $Soft-red;
 }
 
 .flip .card__back .card__bottom {

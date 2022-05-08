@@ -7,7 +7,6 @@ const CountdownTimerItem = ({ counter, title }: IProps) => {
     console.log("ENTER");
 
     const interval = setInterval(() => {
-      console.log("test");
       setFlip((flip) => !flip);
       // setFlip((flip) => !flip);
     }, 500);
@@ -21,14 +20,14 @@ const CountdownTimerItem = ({ counter, title }: IProps) => {
     //   <div className="timer-item_title">{title}</div>
     // </div>
     <div className={`flip-clock__piece ${flip ? "flip" : ""}`}>
-      <div className="flip-clock__card card">
-        <div className="card__top">{counter}</div>
-        <div className="card__bottom" data-value={counter}></div>
-        <div className="card__back" data-value={counter}>
-          <div className="card__bottom" data-value={counter}></div>
+      <div className="flip-clock__card card color-count">
+        <div className="card__top color-count">{counter}</div>
+        <div className="card__bottom color-count" data-value={counter}></div>
+        <div className="card__back color-count" data-value={counter}>
+          <div className="card__bottom color-count" data-value={counter}></div>
         </div>
       </div>
-      <div className="flip-clock__slot">{title}</div>
+      <div className="color-count flip-clock__slot ">{title}</div>
     </div>
   );
 };

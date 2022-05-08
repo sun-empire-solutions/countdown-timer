@@ -9,6 +9,7 @@
     color: $White;
     letter-spacing: 7px;
     margin-bottom: 4rem;
+    font-size: 1.5vw;
     font-weight: 700;
   }
 
@@ -17,5 +18,30 @@
     flex-direction: row;
     justify-content: space-between;
     column-gap: 2rem;
+    border-radius: 0px;
+
+    .flip-clock__piece {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .card__top {
+        border-radius: 5px 5px 0px 0px;
+      }
+      .card__bottom {
+        border-radius: 0px 0px 5px 5px;
+      }
+      .color-count {
+        color: $Soft-red;
+      }
+
+      .flip-clock__slot {
+        margin-top: calc(1vh + 0.5vw + 1.5vh);
+        font-size: 1.2vw;
+        color: $Grayish-blue;
+        letter-spacing: 0.3vw;
+        font-weight: 700;
+      }
+    }
   }
 }

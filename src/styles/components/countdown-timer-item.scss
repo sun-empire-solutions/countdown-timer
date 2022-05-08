@@ -2,7 +2,6 @@ $card: $Dark-desaturated-blue;
 $border: $Very-dark-blue;
 $font-size: 6vw;
 $font-family: "Nunito Sans", sans-serif;
-//$font-width: 12px;
 $font-color: $Soft-red;
 $border-radius: 10px;
 
@@ -50,18 +49,15 @@ $turnDuration: 0.6s;
       width: 100%;
       height: 50%;
       overflow: hidden;
-      //border: 0.2vh solid red;
 
       span {
         font-size: $font-size;
         font-family: $font-family;
-        //  font-weight: $font-width;
         color: $font-color;
       }
     }
     .upperCard {
       align-items: flex-end;
-      //border: 2vh solid yellow;
       border-bottom: 0.2vh solid $border;
       border-top-left-radius: $border-radius;
       border-top-right-radius: $border-radius;
@@ -95,7 +91,6 @@ $turnDuration: 0.6s;
       span {
         font-family: $font-family;
         font-size: $font-size;
-        // font-weight: $font-width;
         color: $font-color;
       }
 
@@ -103,11 +98,10 @@ $turnDuration: 0.6s;
         top: 50%;
         align-items: flex-start;
         transform-origin: 50% 0%;
-        transform: rotateX(180deg); // from 180 to 0
+        transform: rotateX(180deg);
         background-color: $card;
         border-bottom-left-radius: $border-radius;
         border-bottom-right-radius: $border-radius;
-        //border: 0.2vh solid yellow;
         border-top: 0.2vh solid $border;
 
         span {
@@ -119,11 +113,10 @@ $turnDuration: 0.6s;
         top: 0%;
         align-items: flex-end;
         transform-origin: 50% 100%;
-        transform: rotateX(0deg); // from 0 to -180
+        transform: rotateX(0deg);
         background-color: $card;
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
-        // border: 0.2vh solid $border;
         border-bottom: 0.2vh solid $border;
 
         span {

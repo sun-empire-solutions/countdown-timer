@@ -23,6 +23,7 @@ const CountdownTimerItem = ({ counter, title }: IProps) => {
           <span>{counter}</span>
         </div>
       </div>
+      <div className="timer-item_title">{title}</div>
     </div>
   );
 };

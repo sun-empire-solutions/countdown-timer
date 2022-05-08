@@ -32,15 +32,19 @@ const CountdownContainer = () => {
     <div className="container-countdown">
       {remainingTime && (
         <CountdownTimer
-          days={days}
-          hours={hours}
-          minutes={minutes}
-          seconds={seconds}
+          days={addPrefixIfLowerThanTen(days)}
+          hours={addPrefixIfLowerThanTen(hours)}
+          minutes={addPrefixIfLowerThanTen(minutes)}
+          seconds={addPrefixIfLowerThanTen(seconds)}
         />
       )}
       <Footer />
     </div>
   );
+};
+
+const addPrefixIfLowerThanTen = (number) => {
+  return number < 10 ? `0${number}` : number;
 };
 
 export { CountdownContainer };

@@ -3,7 +3,7 @@ import { CountdownTimerItem } from "./CountdownTimerItem";
 const CountdownTimer = () => (
   <div className="countdown-timer">
     <div className="countdown-timer_title">
-      <h5>WE'RE LAUNCHING SOON</h5>
+      <h2>WE'RE LAUNCHING SOON</h2>
     </div>
     <div className="countdown-timer_items">
       <CountdownTimerItem counter={0} title="days" />

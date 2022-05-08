@@ -4,16 +4,8 @@ const CountdownTimerItem = ({ counter, title }: IProps) => {
   const [flip, setFlip] = useState(true);
 
   useEffect(() => {
-    console.log("ENTER");
-
-    const interval = setInterval(() => {
-      console.log("test");
-      setFlip((flip) => !flip);
-      // setFlip((flip) => !flip);
-    }, 500);
-
-    return () => clearInterval(interval);
-  }, []);
+    setFlip((flip) => !flip);
+  }, [counter]);
 
   return (
     <div className="timer-item">
@@ -24,10 +16,10 @@ const CountdownTimerItem = ({ counter, title }: IProps) => {
         <div className="lowerCard">
           <span>{counter}</span>
         </div>
-        <div className="flipCard fold">
+        <div className={`flipCard ${flip ? "fold" : "unfold"}`}>
           <span>{counter}</span>
         </div>
-        <div className="flipCard unfold">
+        <div className={`flipCard ${flip ? "unfold" : "fold"}`}>
           <span>{counter}</span>
         </div>
       </div>

@@ -20,6 +20,11 @@
 
       img {
         width: 100%;
+
+        &:hover {
+          filter: invert(91%) sepia(39%) saturate(7466%) hue-rotate(300deg)
+            brightness(94%) contrast(115%);
+        }
       }
     }
   }

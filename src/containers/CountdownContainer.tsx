@@ -1,6 +1,7 @@
+import { useEffect, useMemo, useState } from "react";
+
 import { Footer } from "../components/Footer";
 import { CountdownTimer } from "../components/CountdownTimer";
-import { useEffect, useMemo, useState } from "react";
 
 const CountdownContainer = () => {
   const [remainingTime, setRemainingTime] = useState(0);

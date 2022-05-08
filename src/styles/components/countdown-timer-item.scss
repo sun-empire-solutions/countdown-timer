@@ -30,6 +30,14 @@ $turnDuration: 0.6s;
   align-items: center;
   width: 10vw;
 
+  @media screen and (max-width: 600px) {
+    width: 19vw;
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 920px) {
+    width: 17vw;
+  }
+
   .flipUnitContainer {
     display: block;
     position: relative;
@@ -40,6 +48,16 @@ $turnDuration: 0.6s;
     background-color: $card;
     border-radius: $border-radius;
     box-shadow: 0px 10px 10px -10px black;
+
+    @media screen and (max-width: 600px) {
+      width: 19vw;
+      height: 19vw;
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 920px) {
+      width: 17vw;
+      height: 17vw;
+    }
 
     .upperCard,
     .lowerCard {
@@ -156,8 +174,12 @@ $turnDuration: 0.6s;
   .timer-item_title {
     color: $Grayish-blue;
     text-transform: uppercase;
-    margin-top: 3vh;
-    font-size: 1vw;
+    margin-top: 1.5vh;
+    font-size: calc(0.7rem + 0.25vw + 0.25vh);
     letter-spacing: 0.4vw;
+
+    @media screen and (max-width: 600px) {
+      font-size: calc(0.4rem + 0.25vw + 0.25vh);
+    }
   }
 }

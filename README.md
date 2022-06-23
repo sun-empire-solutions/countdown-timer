@@ -26,6 +26,9 @@ Users should be able to:
 
 ### Screenshot
 
+![image](https://user-images.githubusercontent.com/26444448/175360955-c8be6b70-3989-4276-8162-526178225ad0.png)
+
+
 ### Links
 
 - Solution URL: https://github.com/sun-empire-solutions/countdown-timer.git

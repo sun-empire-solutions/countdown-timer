@@ -4,14 +4,18 @@ import { Footer } from "../components/Footer";
 import { CountdownTimer } from "../components/CountdownTimer";
 
 const CountdownContainer = () => {
-  const [remainingTime, setRemainingTime] = useState(0);
+  const [remainingTime, setRemainingTime] = useState(
+    getRemainingTimeUntilEndOfMonth()
+  );
   const { days, hours, minutes, seconds } = useMemo(() => {
-    const remaining = new Date(remainingTime);
+    const { days, hours, minutes, seconds } =
+      getDifferenceInDaysHoursMinutesSeconds(remainingTime);
+
     return {
-      days: remaining.getDay(),
-      hours: remaining.getHours(),
-      minutes: remaining.getMinutes(),
-      seconds: remaining.getSeconds(),
+      days,
+      hours,
+      minutes,
+      seconds,
     };
   }, [remainingTime]);
 
@@ -22,12 +26,6 @@ const CountdownContainer = () => {
 
     return () => clearInterval(interval);
   }, []);
-
-  const getRemainingTimeUntilEndOfMonth = () => {
-    const now = new Date();
-    const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0);
-    return endOfMonth.getTime() - now.getTime();
-  };
 
   return (
     <div className="container-countdown">
@@ -44,8 +42,32 @@ const CountdownContainer = () => {
   );
 };
 
+const getRemainingTimeUntilEndOfMonth = () => {
+  const now = new Date();
+  const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+  return endOfMonth.getTime() - now.getTime();
+};
+
 const addPrefixIfLowerThanTen = (number) => {
   return number < 10 ? `0${number}` : number;
+};
+
+const getDifferenceInDaysHoursMinutesSeconds = (remainingTime: number) => {
+  // get total seconds between the times
+  let remaining = remainingTime / 1000;
+  // calculate (and subtract) whole days
+  const days = Math.floor(remaining / 86400);
+  remaining -= days * 86400;
+  // calculate (and subtract) whole hours
+  const hours = Math.floor(remaining / 3600) % 24;
+  remaining -= hours * 3600;
+  // calculate (and subtract) whole minutes
+  const minutes = Math.floor(remaining / 60) % 60;
+  remaining -= minutes * 60;
+  // what's left is seconds
+  const seconds = Math.floor(remaining % 60); // in theory the modulus is not required
+
+  return { days, hours, minutes, seconds };
 };
 
 export { CountdownContainer };
